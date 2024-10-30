@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diwali Celebration</title>
+    <link rel="stylesheet" href="diwali.css">
+</head>
+<body>
+    <div class="lights"></div>
+    <div class="pathakhe"></div>
+    <canvas class="fireworks-canvas"></canvas> <!-- Canvas for fireworks -->
+    <div class="card">
+        <h1>Happy Diwali!</h1>
+    </div>
+    <audio id="background-music" src="fireworks.mp3" loop preload="auto"></audio> <!-- Background music -->
+    
+    <script src="diwali.js"></script>
+    <script>
+        // Ensure audio starts playing when the page loads
+        window.onload = () => {
+            const audio = document.getElementById('background-music');
+            audio.play().catch(error => {
+                console.error('Error playing audio:', error);
+            });
+        };
+    </script>
+</body>
+</html>
